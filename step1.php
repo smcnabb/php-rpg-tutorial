@@ -1,6 +1,7 @@
 <?php
 
 // Variables are prefixed with the dollar sign
+// Variable names are case sensitive
 $message = 'Hello World!';
 
 // Output is sent using echo or print. Concatenation is done using a period (.)
