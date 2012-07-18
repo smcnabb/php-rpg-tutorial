@@ -30,4 +30,5 @@
 
 <?php include 'html/footer.php';
 
-// TODO ???
+// TODO Add a new query string value, a new form value and output them
+

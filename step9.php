@@ -23,3 +23,5 @@ while ($row = mysqli_fetch_array($query))
 echo '</ul>';
 
 include 'html/footer.php';
+
+// TODO ???

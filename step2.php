@@ -37,6 +37,7 @@ else
     echo '<p>The value is greater than 500</p>';
 }
 
+// For loop
 echo 'I can count to 10:';
 echo '<ul>';
 for ($i = 1; $i <= 10; $i++)
