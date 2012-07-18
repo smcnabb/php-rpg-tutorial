@@ -5,15 +5,16 @@
 4 Functions / Classes / Default arguments
 5 Includes/Requires
 6 Embeddeding PHP in HTML / Template friendly statements
-7 Database
-8 Cookies
-9 Query strings / Forms
+7 Cookies
+8 Query strings / Forms
+9 Database
 
-Sessions?
+Extra
 Passing data to JS
 Error handling / Exception
 Change DB username
 DB settings as constants
+Sessions
 
 - Allow a user to login with a form
 - Display details of current room

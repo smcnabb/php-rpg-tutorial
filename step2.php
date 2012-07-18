@@ -37,5 +37,30 @@ else
     echo '<p>The value is greater than 500</p>';
 }
 
+echo 'I can count to 10:';
+echo '<ul>';
+for ($i = 1; $i <= 10; $i++)
+{
+    echo '<li>'.$i.'</li>';
+}
+echo '</ul>';
+
 // Inline if / Ternary operator
 echo '<p>The value is '.($value < MAX_VALUE ? 'less' : 'greater').' than 500</p>';
+
+// No date type in PHP. Dates are stores as timestamp integers
+$today = time();
+echo '<p>It has been '.number_format($today).' seconds since January 1 1970 00:00:00 GMT</p>';
+
+// Use mktime() to create timestamps for specific dates
+$startOfTheYear = time() - mktime(0, 0, 0, 1, 1, 2012);
+echo '<p>It has been '.number_format($startOfTheYear).' seconds since the start of this year</p>';
+
+// Use mktime() to convert date strings to timestamps
+$startOfTheYear = time() - strtotime('1 January 2012 00:00:00');
+echo '<p>It has been '.number_format($startOfTheYear).' seconds since the start of this year</p>';
+
+// Use the date() function for display
+echo '<p>Today is: '.date('j F Y H:i:s', $today).'</p>';
+
+// TODO Write code to loop through the days of June and output the day of the week

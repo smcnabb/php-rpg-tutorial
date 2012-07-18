@@ -15,7 +15,6 @@ foreach ($rooms as $key => $room)
 }
 echo '</ul>';
 
-
 // Associative array
 $rooms = array(
     'hut' => 'Hut',
@@ -23,12 +22,7 @@ $rooms = array(
     'pub' => 'Pub'
 );
 
-?>
-
-<!-- We're now embedding PHP code within HTML -->
-<p>You are in the <?php echo $rooms['pub']; ?></p>
-
-<?php
+echo '<p>You are in the '.$rooms['pub'].'</p>';
 
 // Nested associative array
 $rooms = array(
@@ -49,12 +43,8 @@ $rooms = array(
     )
 );
 
-?>
-
-<p>You are in the <?php echo $rooms['pub']['name']; ?> along with
-    <?php echo number_format($rooms['pub']['players']); ?> other people.</p>
-
-<?php
+echo '<p>You are in the '.$rooms['pub']['name'].' along with '.
+    number_format($rooms['pub']['players']).' other people.</p>';
 
 // A nested mix of normal and associative arrays
 $rooms = array(
@@ -83,7 +73,28 @@ $rooms = array(
     )
 );
 
-?>
+// Switch statement
+foreach ($rooms as $key => $room)
+{
+    switch ($key)
+    {
+        case 'hut':
+            echo '<p>HUT</p>';
+            break;
+        case 'forest':
+            echo '<p>TREES</p>';
+            break;
+        case 'pub':
+            echo '<p>DRINK!</p>';
+            break;
+        default:
+            echo '<p>FAIL!</p>';
 
-<p>You are in the <?php echo $rooms['pub']['name']; ?> along with
-    <?php echo implode(', ', $rooms['pub']['players']); ?></p>
+    }
+}
+
+// TODO Change the room data to have an array of connections to other rooms rather than players
+// The keys in the array should be directions e.g. north, south, east, west, and the values should
+// be the keys of the connected room e.g. forest.
+// Output each room along with the connection information
+

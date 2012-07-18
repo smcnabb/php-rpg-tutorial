@@ -2,30 +2,26 @@
 
 include 'html/header.php';
 
-// Get the room data from an include for the moment
 require_once 'data/rooms.php';
-
-// We only need class definitions once
-require_once 'lib/Room.php';
-require_once 'lib/Rooms.php';
-
-// Instantiate a room object
-$rooms = new Rooms();
-foreach ($roomData as $id => $room)
-{
-    $room = new Room($id, $room['name'], $room['description'], $room['connections']);
-    $rooms->addRoom($room);
-}
 
 ?>
 
 Rooms:
 <ul>
-    <?php foreach ($rooms as $room): ?>
-        <li><?php echo $room->getName(); ?> - <?php echo $room->getDescription(); ?></li>
+    <?php foreach ($roomData as $room): ?>
+        <li><?php echo $room['name']; ?></li>
     <?php endforeach; ?>
+</ul>
+
+Rooms:
+<ul>
+    <?php for ($i = 1; $i <= count($roomData); $i++): ?>
+        <li><?php echo $roomData[$i]['name']; ?></li>
+    <?php endfor; ?>
 </ul>
 
 <?php
 
 include 'html/footer.php';
+
+// TODO Change the foreach to output the description and connections for each room

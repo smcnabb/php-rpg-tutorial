@@ -4,8 +4,6 @@
 class Room
 {
     // Private and protected member variables
-    // Private variables can only be access by this class, protected by inherited and parent classes
-    // The underscore is a common standard but not a language constraint
     protected $_id;
     protected $_name;
     protected $_description;

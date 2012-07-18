@@ -19,7 +19,7 @@ class Rooms implements Iterator
     // Notice we can declare the type
     public function addRoom(Room $room)
     {
-        $this->_rooms[$room->getId()] = $room;
+        $this->_rooms[] = $room;
     }
 
     public function getRoom($id)
